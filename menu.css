@@ -1,0 +1,254 @@
+/* Menu */
+
+.navbar-site {
+    display: flex;
+    width: 100%;
+    min-height: 75px;
+    max-height: 75px;
+    position: fixed;
+    top: 0;
+    z-index: 10020;
+    background: #fff;
+    color: #000;
+}
+
+/* nav */
+.navbar-site__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+/* logo */
+.navbar-site__logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 5px;
+    color: #000;
+}
+
+.navbar-site__logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.navbar-site__logo-strong {
+    padding: 0 5px;
+}
+
+.navbar-site__login-strong {
+    display: none;
+}
+
+/*  logo end */
+
+.navbar-site__item-busqueda {
+    margin-right: 30px;
+}
+
+.navbar-site__busqueda {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar-site__busqueda-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: var(--bg-color-input);
+}
+
+.navbar-site__list {
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-site__item {
+    transition: var(--transition);
+}
+
+.navbar-site__link {
+    color: #000;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.navbar-site__link:hover {
+    cursor: pointer;
+}
+
+.navbar-site__active::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: var(--primary-color);
+    display: block;
+    margin: 0.5em auto 0;
+}
+
+/* navbar web end */
+
+
+/* navbar-site__toggler mobile version only */
+.navbar-site__toggler {
+    border: transparent;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+}
+
+.navbar-site__toggler__span,
+.navbar-site__toggler__span:before,
+.navbar-site__toggler__span:after {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: .3s;
+}
+
+.navbar-site__toggler__span:before {
+    content: '';
+    transform: translateY(-9px);
+}
+
+.navbar-site__toggler__span:after {
+    content: '';
+    transform: translateY(6px);
+}
+
+.navbar-site__toggler.toggler-open span {
+    background-color: transparent;
+}
+
+.navbar-site__toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.navbar-site__toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+/* navbar-site__toggler mobile version only end */
+
+
+@media screen and (max-width: 1000px) {
+
+    /* navbar mobile */
+    .navbar-site__toggler {
+        display: block;
+    }
+
+    .navbar-site__navbar {
+        min-height: 60px;
+    }
+
+    .navbar-site__list {
+        position: absolute;
+        width: 50%;
+        height: calc(100vh - 70px);
+        left: 0;
+        top: 70px;
+        bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        color: #000;
+        max-height: 0;
+        overflow: hidden;
+        transition: .8s;
+        background: #fff;
+    }
+
+    .navbar-site__list::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    .navbar-site__list::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+        border-radius: 3px;
+    }
+
+    .navbar-site__list::-webkit-scrollbar-track {
+        background-color: #dddddd;
+    }
+
+    .navbar-site__item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-site__item-busqueda {
+        margin: 0;
+    }
+
+    .navbar-site__link,
+    .navbar-site__busqueda {
+        padding: 20px;
+    }
+
+    .navbar-site__link:hover {
+        color: var(--azul-destaque);
+    }
+
+    .navbar-site__navbar ul.open {
+        max-height: calc(100vh - 70px);
+        overflow: visible;
+        overflow-y: auto;
+    }
+
+    /* navbar mobile end */
+
+    .navbar-site__login-strong {
+        display: inline-block;
+        padding: 0 5px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    /* .navbar-site__logo-strong {
+        display: none;
+    } */
+
+    .navbar-site__list {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 300px) {
+    .navbar-site__logo {
+        padding: 5px;
+    }
+
+    .navbar-site__logo-strong {
+        display: none;
+    }
+
+
+}
+
+/*  navbar end */

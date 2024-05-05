@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./img/faviconLight.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Menu responsive</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-site">
+            <nav class="navbar-site__navbar">
+                <button class="navbar-site__toggler" aria-label="Menu">
+                    <span class="navbar-site__toggler__span"></span>
+                </button>
+                <a href="/" class="navbar-site__logo">
+                    <img src="./img/logo.png" class="navbar-site__logo-img" width="60" height="60" alt="Logo YeiiMaccDev">
+                    <strong class="navbar-site__logo-strong">YeiiMaccDev</strong>
+                </a>
+                <ul class="navbar-site__list">
+                    <li class="navbar-site__item navbar-site__item-busqueda">
+                        <div class="navbar-site__busqueda">
+                            <input i class="navbar-site__busqueda-input outline-none" id="search-input" type="text"
+                                placeholder="Qué deseas buscar?" aria-label="Search" />
+                            <button class="btn btn-light navbar-site__button" id="search-btn" title="Buscar."
+                                aria-label="Buscar">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="navbar-site__item">
+                        <a class="navbar-site__link navbar-site__active" href="#home">Inicio</a>
+                    </li>
+                    <li class="navbar-site__item">
+                        <a class="navbar-site__link" href="#ofertas">Ofertas</a>
+                    </li>
+                    <li class="navbar-site__item">
+                        <a class="navbar-site__link" href="#productos">Productos</a>
+                    </li>
+                    <li class="navbar-site__item">
+                        <a class="navbar-site__link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="navbar-site__item btn btn-login">
+                        <a class="navbar-site__link" href="assets/login.html">
+                            <button class="btn btn-light navbar-site__button login-btn" title="Iniciar Sesión"
+                                aria-label="Iniciar Sesión.">
+                                <i class="fa-solid fa-user"></i>
+                                <strong class="navbar-site__login-strong">Login</strong>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <button class="cart-btn" id="cart-btn" title="cart de compras." aria-label="cart de compras.">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </nav>
+        </div>
+        <div style="min-height: 75px;"></div>
+    </header>
+    <main>
+        
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="./menu.js"></script>
+</body>
+
+</html>
