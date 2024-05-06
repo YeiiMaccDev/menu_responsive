@@ -54,3 +54,26 @@ navToggler.addEventListener('click', togglerClick);
 navLinks.forEach((link) => {
     link.addEventListener('click', () =>  navLinkClick(link) )
 });
+
+
+// Function to change the active menu class when scrolling through the page
+function changeActiveMenu() {
+    const sections = document.querySelectorAll("section");
+    const menuItems = document.querySelectorAll("nav ul li a"); 
+
+    sections.forEach((seccion, index) => {
+        const posicion = seccion.getBoundingClientRect(); // Section position
+        const mitadVentana = window.innerHeight / 2; // Half the height of the window
+
+        if (posicion.top <= mitadVentana && posicion.bottom >= mitadVentana) {
+            // If the section is in the centre of the window, highlight the corresponding link in the menu.
+            menuItems.forEach((item) => {
+                item.classList.remove("navbar-site__active");
+            });
+            menuItems[index].classList.add("navbar-site__active");
+        }
+    });
+}
+
+// Event to be executed when scrolling the page.
+window.addEventListener("scroll", changeActiveMenu);

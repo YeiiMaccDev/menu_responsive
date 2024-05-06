@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #ff8282;
+    --bg-color: #a2fff7;
     --bg-color-input: #ebebeb;
     --primary-color: #51d1f6;
     --primary-color-light: #ffcc33;
@@ -89,3 +89,26 @@ body {
     z-index: 1000;
 }
 
+
+/*--------------- Height sections ---------------*/
+.section-100vh,
+.section-50vh {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* padding: var(--height-menu) 0; */
+}
+
+.section-100vh {
+    min-height: calc(100vh - 75px);
+    /* min-height: 100vh; */
+    height: auto;
+}
+
+.section-50vh {
+    min-height: calc(50vh - 75px);
+    /* min-height: 50vh; */
+    height: auto;
+}
